@@ -81,6 +81,13 @@ function overridenBlockTemplates(category) {
 		spec: 'set servo %servoPin to %servoValue'
 	};
 
+	SpriteMorph.prototype.blocks.bearPawWrite =
+	{
+		type: 'command',
+		category: 'arduino',
+		spec: 'left %leftPaw paw to %servoValue'
+	};
+
 	SpriteMorph.prototype.blocks.pwmWrite =
 	{
 		type: 'command',
@@ -105,6 +112,7 @@ function overridenBlockTemplates(category) {
         blocks.push(blockBySelector('setPinMode'));
 		blocks.push('-');
         blocks.push(blockBySelector('servoWrite'));
+        blocks.push(blockBySelector('bearPawWrite'));
         blocks.push(blockBySelector('digitalWrite'));
         blocks.push(blockBySelector('pwmWrite'));
 		blocks.push('-');

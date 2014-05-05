@@ -60,6 +60,14 @@ function overridenLabelPart(spec) {
 				true
 				);
 			break;
+		case '%leftPaw':
+			part = new InputSlotMorph(
+				null,
+				true,
+				function() { return boardSpecs.servoPins },
+				true
+				);
+			break;
 		case '%pwmPin':
 			part = new InputSlotMorph(
 				null,
